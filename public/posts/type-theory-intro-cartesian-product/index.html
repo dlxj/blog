@@ -108,10 +108,14 @@
 \[ \frac{\vdash a : A \quad \vdash b : B}{\vdash u : P} \]<ol start="3">
 <li><strong>投影（Projections）</strong></li>
 </ol>
-\[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ol start="4">
+\[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]<p>
+</p>
+\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ol start="4">
 <li><strong>等式约束1（Equations 1）</strong></li>
 </ol>
-\[ \pi_1 (u)=a \]\[ \pi_2 (u)=b \]<ol start="5">
+\[ \pi_1 (u)=a \]<p>
+</p>
+\[ \pi_2 (u)=b \]<ol start="5">
 <li><strong>等式约束2（Equations 2）</strong></li>
 </ol>
 \[ (\pi_1 (u),\pi_2 (u))=u \]<p>其中，\( P \) 就是笛卡尔积 \( A \times B \)，\( u \) 就是有序对 \( (a,b) \)<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>。</p>
@@ -151,7 +155,9 @@
 \end{document}
 </code></pre><hr>
 <h3 id="构造投影projections">构造：投影（Projections）</h3>
-\[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ul>
+\[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]<p>
+</p>
+\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ul>
 <li>这串公式用自然语言说，就是：如果 \(u\) 的类型是 \(P\)，那么 \(\pi_1(u)\) 的类型是 \(A\)。</li>
 <li>在编程中， \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如<code>proj_1(u)</code>、<code>proj_2(u)</code>的前缀形式。</li>
 <li>在集合论，就是：对于有序对 \((a, b)\) 总能通过投影\(\pi_1\) 、\(\pi_2\) 提取出它的第一个分量 \(\pi_1(a, b)\) 和第二个分量 \(\pi_2(a, b)\)，分别属于 \(A\) 和 \(B\) 。</li>
@@ -179,7 +185,9 @@
 <p>因此，需要再加上<strong>等式</strong>将构造加以<strong>约束</strong>，这就是<strong>公理（axioms）</strong>，灵魂注入，ho！</p>
 <hr>
 <h3 id="等式约束1equations-1">等式约束1（Equations 1）</h3>
-\[ \pi_1 (u) = a \]\[ \pi_2 (u) = b \]<p>这两个等式为结构赋予意义：对任意有序对总是<strong>存在（exist）</strong> 投影。
+\[ \pi_1 (u) = a \]<p>
+</p>
+\[ \pi_2 (u) = b \]<p>这两个等式为结构赋予意义：对任意有序对总是<strong>存在（exist）</strong> 投影。
 对应范畴论<strong>泛性质（universal properties）<strong>中的</strong>存在性（existence）</strong>。</p>
 <p><img src="https://mathagape.github.io/blog/images/cartesian-product-category-axioms.png" alt=""></p>
 <p>直观可见，这两个等式形成了两个<strong>交换三角形（triangle commutes）</strong>。</p>
@@ -311,18 +319,5 @@ an element \((a, b)\) to \(a\) and \(b\) respectively.&#160;<a href="#fnref:1" c
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-<script>
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)']]                  
-    },
-    loader:{
-      load: ['ui/safe']
-    },
-  };
-</script>
-
 </body>
 </html>
